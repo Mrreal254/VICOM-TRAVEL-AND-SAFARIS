@@ -1,0 +1,5 @@
+import Link from "next/link";
+const stats = [["Users","—"],["Customers","—"],["Suppliers","—"],["Destinations","—"]];
+export default function Admin() {
+  return <main className="min-h-screen bg-slate-50 p-6"><div className="mx-auto max-w-6xl"><div className="flex items-center justify-between"><div><p className="text-sm font-bold uppercase tracking-widest text-green-700">VICOM ADMIN</p><h1 className="mt-1 text-4xl font-black">Dashboard</h1></div><Link href="/" className="font-bold text-green-800">View site</Link></div><div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{stats.map(([a,b])=><div key={a} className="rounded-2xl bg-white p-6 shadow-sm"><p className="text-sm text-slate-500">{a}</p><p className="mt-2 text-3xl font-black">{b}</p></div>)}</div><div className="mt-8 rounded-2xl bg-white p-6"><h2 className="font-black">Administration</h2><p className="mt-2 text-sm text-slate-600">Users, destinations, suppliers, settings and audit logs are exposed by the Phase 1 Laravel API.</p></div></div></main>;
+}
